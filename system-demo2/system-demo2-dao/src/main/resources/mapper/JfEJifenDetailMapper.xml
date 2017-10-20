@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gznb.system.demo2.dao.mapper.JfEJifenDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+    <!--
+    @mbggenerated
+    -->
+    <id column="s_water_no" property="sWaterNo" jdbcType="VARCHAR" />
+    <result column="account_no" property="accountNo" jdbcType="VARCHAR" />
+    <result column="trade_amount" property="tradeAmount" jdbcType="DECIMAL" />
+    <result column="trade_jifen" property="tradeJifen" jdbcType="DECIMAL" />
+    <result column="trade_time" property="tradeTime" jdbcType="TIMESTAMP" />
+    <result column="effected_days" property="effectedDays" jdbcType="DECIMAL" />
+    <result column="effected_time" property="effectedTime" jdbcType="TIMESTAMP" />
+    <result column="channel_type" property="channelType" jdbcType="VARCHAR" />
+    <result column="proccess_status" property="proccessStatus" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="old_water_no" property="oldWaterNo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+    @mbggenerated
+    -->
+    s_water_no, account_no, trade_amount, trade_jifen, trade_time, effected_days, effected_time, 
+    channel_type, proccess_status, create_time, old_water_no
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!--
+    @mbggenerated
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from jf_e_jifen_detail
+    where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    <!--
+    @mbggenerated
+    -->
+    delete from jf_e_jifen_detail
+    where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+    <!--
+    @mbggenerated
+    -->
+    insert into jf_e_jifen_detail (s_water_no, account_no, trade_amount, 
+      trade_jifen, trade_time, effected_days, 
+      effected_time, channel_type, proccess_status, 
+      create_time, old_water_no)
+    values (#{sWaterNo,jdbcType=VARCHAR}, #{accountNo,jdbcType=VARCHAR}, #{tradeAmount,jdbcType=DECIMAL}, 
+      #{tradeJifen,jdbcType=DECIMAL}, #{tradeTime,jdbcType=TIMESTAMP}, #{effectedDays,jdbcType=DECIMAL}, 
+      #{effectedTime,jdbcType=TIMESTAMP}, #{channelType,jdbcType=VARCHAR}, #{proccessStatus,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{oldWaterNo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+    <!--
+    @mbggenerated
+    -->
+    insert into jf_e_jifen_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sWaterNo != null" >
+        s_water_no,
+      </if>
+      <if test="accountNo != null" >
+        account_no,
+      </if>
+      <if test="tradeAmount != null" >
+        trade_amount,
+      </if>
+      <if test="tradeJifen != null" >
+        trade_jifen,
+      </if>
+      <if test="tradeTime != null" >
+        trade_time,
+      </if>
+      <if test="effectedDays != null" >
+        effected_days,
+      </if>
+      <if test="effectedTime != null" >
+        effected_time,
+      </if>
+      <if test="channelType != null" >
+        channel_type,
+      </if>
+      <if test="proccessStatus != null" >
+        proccess_status,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="oldWaterNo != null" >
+        old_water_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sWaterNo != null" >
+        #{sWaterNo,jdbcType=VARCHAR},
+      </if>
+      <if test="accountNo != null" >
+        #{accountNo,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeAmount != null" >
+        #{tradeAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="tradeJifen != null" >
+        #{tradeJifen,jdbcType=DECIMAL},
+      </if>
+      <if test="tradeTime != null" >
+        #{tradeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="effectedDays != null" >
+        #{effectedDays,jdbcType=DECIMAL},
+      </if>
+      <if test="effectedTime != null" >
+        #{effectedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channelType != null" >
+        #{channelType,jdbcType=VARCHAR},
+      </if>
+      <if test="proccessStatus != null" >
+        #{proccessStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oldWaterNo != null" >
+        #{oldWaterNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+    <!--
+    @mbggenerated
+    -->
+    update jf_e_jifen_detail
+    <set >
+      <if test="accountNo != null" >
+        account_no = #{accountNo,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeAmount != null" >
+        trade_amount = #{tradeAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="tradeJifen != null" >
+        trade_jifen = #{tradeJifen,jdbcType=DECIMAL},
+      </if>
+      <if test="tradeTime != null" >
+        trade_time = #{tradeTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="effectedDays != null" >
+        effected_days = #{effectedDays,jdbcType=DECIMAL},
+      </if>
+      <if test="effectedTime != null" >
+        effected_time = #{effectedTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="channelType != null" >
+        channel_type = #{channelType,jdbcType=VARCHAR},
+      </if>
+      <if test="proccessStatus != null" >
+        proccess_status = #{proccessStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oldWaterNo != null" >
+        old_water_no = #{oldWaterNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+    <!--
+    @mbggenerated
+    -->
+    update jf_e_jifen_detail
+    set account_no = #{accountNo,jdbcType=VARCHAR},
+      trade_amount = #{tradeAmount,jdbcType=DECIMAL},
+      trade_jifen = #{tradeJifen,jdbcType=DECIMAL},
+      trade_time = #{tradeTime,jdbcType=TIMESTAMP},
+      effected_days = #{effectedDays,jdbcType=DECIMAL},
+      effected_time = #{effectedTime,jdbcType=TIMESTAMP},
+      channel_type = #{channelType,jdbcType=VARCHAR},
+      proccess_status = #{proccessStatus,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      old_water_no = #{oldWaterNo,jdbcType=VARCHAR}
+    where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
+  </update>
+</mapper>

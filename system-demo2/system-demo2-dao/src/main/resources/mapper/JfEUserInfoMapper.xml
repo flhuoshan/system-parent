@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gznb.system.demo2.dao.mapper.JfEUserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.gznb.system.demo2.pojo.po.JfEUserInfo" >
+    <!--
+    @mbggenerated
+    -->
+    <id column="user_uuid" property="userUuid" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+    @mbggenerated
+    -->
+    user_uuid, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    <!--
+    @mbggenerated
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from jf_e_user_info
+    where user_uuid = #{userUuid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    <!--
+    @mbggenerated
+    -->
+    delete from jf_e_user_info
+    where user_uuid = #{userUuid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gznb.system.demo2.pojo.po.JfEUserInfo" >
+    <!--
+    @mbggenerated
+    -->
+    insert into jf_e_user_info (user_uuid, create_time)
+    values (#{userUuid,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gznb.system.demo2.pojo.po.JfEUserInfo" >
+    <!--
+    @mbggenerated
+    -->
+    insert into jf_e_user_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userUuid != null" >
+        user_uuid,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userUuid != null" >
+        #{userUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gznb.system.demo2.pojo.po.JfEUserInfo" >
+    <!--
+    @mbggenerated
+    -->
+    update jf_e_user_info
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where user_uuid = #{userUuid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gznb.system.demo2.pojo.po.JfEUserInfo" >
+    <!--
+    @mbggenerated
+    -->
+    update jf_e_user_info
+    set create_time = #{createTime,jdbcType=TIMESTAMP}
+    where user_uuid = #{userUuid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gznb</groupId>
+    <artifactId>system-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>system-core</module>
+        <module>system-base</module>
+        <module>system-jifen</module>
+        <module>system-jifen-dao</module>
+        <module>system-jifen-service</module>
+        <module>system-jifen-interface</module>
+        <module>system-jifen-web</module>
+        <module>system-jifen-pojo</module>
+        <module>system-web-dist</module>
+        <module>system-member</module>
+        <module>system-member-pojo</module>
+        <module>system-member-dao</module>
+        <module>system-member-service</module>
+        <module>system-member-interface</module>
+        <module>system-member-web</module>
+        <module>system-demo</module>
+        <module>system-demo2</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
