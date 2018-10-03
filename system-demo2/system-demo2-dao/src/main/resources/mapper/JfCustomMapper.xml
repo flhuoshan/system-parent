@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.gznb.system.demo2.dao.mapper.JfCustomMapper" >
-  <select id="listJfEDetail" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" resultMap="com.gznb.system.demo2.dao.mapper.JfEJifenDetailMapper.BaseResultMap">
+<mapper namespace="com.domain.system.demo2.dao.mapper.JfCustomMapper" >
+  <select id="listJfEDetail" parameterType="com.domain.system.demo2.pojo.po.JfEJifenDetail" resultMap="com.domain.system.demo2.dao.mapper.JfEJifenDetailMapper.BaseResultMap">
       select * from jf_e_jifen_detail
       <where>
           <if test = "accountNo != null">

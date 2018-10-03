@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.gznb.system.demo2.dao.mapper.JfEJifenDetailMapper" >
-  <resultMap id="BaseResultMap" type="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+<mapper namespace="com.domain.system.demo2.dao.mapper.JfEJifenDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.domain.system.demo2.pojo.po.JfEJifenDetail" >
     <!--
     @mbggenerated
     -->
@@ -40,7 +40,7 @@
     delete from jf_e_jifen_detail
     where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+  <insert id="insert" parameterType="com.domain.system.demo2.pojo.po.JfEJifenDetail" >
     <!--
     @mbggenerated
     -->
@@ -53,7 +53,7 @@
       #{effectedTime,jdbcType=TIMESTAMP}, #{channelType,jdbcType=VARCHAR}, #{proccessStatus,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{oldWaterNo,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+  <insert id="insertSelective" parameterType="com.domain.system.demo2.pojo.po.JfEJifenDetail" >
     <!--
     @mbggenerated
     -->
@@ -129,7 +129,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.domain.system.demo2.pojo.po.JfEJifenDetail" >
     <!--
     @mbggenerated
     -->
@@ -168,7 +168,7 @@
     </set>
     where s_water_no = #{sWaterNo,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.gznb.system.demo2.pojo.po.JfEJifenDetail" >
+  <update id="updateByPrimaryKey" parameterType="com.domain.system.demo2.pojo.po.JfEJifenDetail" >
     <!--
     @mbggenerated
     -->

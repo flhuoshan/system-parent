@@ -2,3 +2,5 @@
 .idea/
 *.iml
 */target
+/tools/mybatis-generator/src/
+!/tools/mybatis-generator/src/main/
